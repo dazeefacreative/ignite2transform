@@ -1,0 +1,13 @@
+/* 1. Imports MUST come first */
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Martian+Mono&family=Poppins:wght@400;700&display=swap');
+
+/* 2. Then the tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Then your custom base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
