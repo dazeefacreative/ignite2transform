@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 const links = [
     { href: "/", label: "Home" },
     { href: "/the_alignment", label: "The Alignment", dropdown: [
+        { href: "https://alignandthrive.app", label: "Align & Thrive Assesment" },
+        { href: "https://www.feedbackyes.com/", label: "FeedbackYes AI" },
         { href: "/the_alignment/#why_alignment", label: "Why Alignment" },
         { href: "/the_alignment/#how_we_work", label: "How We Work" },
         { href: "/the_alignment/#misaligned_book", label: "Misaligned Book" },
@@ -57,16 +59,16 @@ export default function Header() {
                                     className={`text-sm flex items-center gap-1 ${isActive ? "text-brand-green" : "text-black"} transition-colors duration-200 hover:opacity-60`}
                                 >
                                     {l.label}
-                                    <Icon icon="iconoir:arrow-up-right" />
+                                    <Icon icon={dropdownOpen ? "iconoir:arrow-down-right" : "iconoir:arrow-up-right"} />
                                 </a>
                                 <div
-                                    className={`absolute left-0 top-full mt-2 min-w-[180px] bg-white shadow-lg rounded-md border border-gray-100 z-50 transition-all duration-200 ${dropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                                    className={`absolute p-1 flex flex-col left-0 top-full mt-2 min-w-[180px] bg-white shadow-lg rounded-md border border-gray-100 z-50 transition-all duration-200 ${dropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                                 >
                                     {l.dropdown.map((item) => (
                                         <a
                                             key={item.label}
                                             href={item.href}
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-green hover:text-white rounded-md transition-colors duration-150"
+                                            className="block px-4 py-2 text-nowrap text-sm text-gray-700 hover:bg-brand-green hover:text-white rounded-md transition-colors duration-150"
                                         >
                                             {item.label}
                                         </a>
@@ -139,7 +141,7 @@ export default function Header() {
                                         className={`py-3 text-2xl flex items-center gap-2 w-full justify-center ${isLinkActive(l.href) ? "text-brand-green" : "text-black"}`}
                                     >
                                         {l.label}
-                                        <Icon icon={mobileDropdownOpen ? "iconoir:nav-arrow-down" : "iconoir:nav-arrow-right"} />
+                                        <Icon icon="iconoir:nav-arrow-right" />
                                     </button>
                                     {mobileDropdownOpen && (
                                         <div className="flex flex-col w-full ml-[10px] items-center">
@@ -173,7 +175,7 @@ export default function Header() {
                             </a>
                         );
                     })}
-                    <a href="/book-free-session"                     
+                    <a href="https://calendar.app.google/FAq3GDmqFkhffqxH7"                     
                     className={`py-3 text-2xl ${
                             isLinkActive("/book-free-session")
                             ? "text-brand-green"

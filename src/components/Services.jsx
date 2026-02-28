@@ -66,7 +66,7 @@ export default function Services(){
                       {service.description}
                     </p>
                     <a href="https://calendar.app.google/FAq3GDmqFkhffqxH7" className="flex text-sm text-white gap-2 bg-brand-green pl-5 p-2 rounded-md items-center transition-colors duration-200 hover:bg-brand-green-hover">
-                      Book a Free Session <Icon icon="iconoir:arrow-up-right" className="text-brand-green bg-brand-yellow p-1 rounded-sm size-6" />
+                      Book A Call <Icon icon="iconoir:arrow-up-right" className="text-brand-green bg-brand-yellow p-1 rounded-sm size-6" />
                     </a>
                   </div>
                 </div>

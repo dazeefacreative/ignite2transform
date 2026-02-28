@@ -6,19 +6,19 @@ import phone from "../images/phone.png"
 
 const podcasts = [
     {
-        name: "Generative AI for Workplace & Business Automation with Charles Agbo",
+        name: "EP 1: Generative AI for Workplace & Business Automation with Charles Agbo",
         youtube_url: "https://www.youtube.com/embed/tK0jdn3aGEA"
     },
     {
-        name: "How to Bring Clarity & Cohesion to Your Team",
+        name: "EP 2: How to Bring Clarity & Cohesion to Your Team",
         youtube_url: "https://www.youtube.com/embed/YBVCwBCeY_8"
     },
     {
-        name: "Why Nigeria Needs Inclusive Workplaces",
+        name: "EP 3: Why Nigeria Needs Inclusive Workplaces",
         youtube_url: "https://www.youtube.com/embed/vNgIUG-JVBk"
     },
     {
-        name: "Try These Stress Management Techniques",
+        name: "EP 4: Try These Stress Management Techniques",
         youtube_url: "https://www.youtube.com/embed/tgWQL1_QVJc"
     },
 ]
@@ -77,15 +77,15 @@ export default function Podcast(){
                             {`> Browse Youtube for more Podcasts`}
                         </a>
                         </div>
-                        <div className="flex flex-col gap-2.5 mb-5 justify-start">
+                        <div className="flex flex-col gap-2.5 mb-5 justify-start px-6 lg:px-0">
                             
                                 {podcasts?.map((episode, i) => (
-                                <div key={i} className="flex items-center gap-4">
-                                    <span className="w-[260px] font-bold text-sm">{"EP: " + episode.name}</span>
-                                    <div className="w-full max-w-2xl mx-auto rounded-lg overflow-hidden border border-gray-300">
+                                <div key={i} className="flex flex-col sm:flex-row gap-4 sm:items-center">
+                                    <p className="w-[300px] sm:w-[260px] font-bold">{episode.name}</p>
+                                    <div className="w-full max-w-2xl mx-auto rounded-lg overflow-hidden border border-gray-300 mb-6">
                                         <iframe
                                             width="100%"
-                                            height="120"
+                                            height="160"
                                             src={episode.youtube_url}
                                             title="YouTube video player"
                                             frameBorder="0"

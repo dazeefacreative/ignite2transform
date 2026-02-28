@@ -7,7 +7,9 @@ const workData = [
   {
     icon: "ri:chat-voice-fill",
     title: "Team Alignment Coaching",
-    description: "Ongoing support for leadership teams navigating change.",
+    description: "Support for leadership teams navigating change and complexity. Focused coaching that restores clarity, strengthens relationships, and drives aligned action. ",
+    link: "https://calendar.app.google/FAq3GDmqFkhffqxH7",
+    button: "Book a Coaching Session",
     y: 0,
     x: -60,
     delay: 0
@@ -15,7 +17,9 @@ const workData = [
   {
     icon: "ri:home-office-fill",
     title: "Workshops & Facilitated Sessions",
-    description: "Designed gatherings that surface clarity, accountability, and trust.",
+    description: "Spaces where clarity, accountability, and trust come alive. Interactive sessions designed to surface what matters and help teams align around shared goals. ",
+    link: "mailto:info@ignite2transform.com?subject=Workshop%20Enquiry",
+    button: "Make enquiry about workshops",
     y: -20,
     x: 0,
     delay: 0.2
@@ -23,7 +27,9 @@ const workData = [
   {
     icon: "ri:align-item-horizontal-center-fill",
     title: "Align Metrics Team Assessment",
-    description: "A diagnostic to reveal where misalignment is costing energy.",
+    description: "See where misalignment is costing your team energy and results. A diagnostic that reveals hidden gaps in communication, decision-making, and expectations.",
+    link: "https://alignandthrive.app/",
+    button: "Use Team Assesment",
     y: 60, 
     x: 0,
     delay: 0.4
@@ -31,7 +37,9 @@ const workData = [
     {
     icon: "ri:id-card-fill",
     title: "Align & Thrive Cards",
-    description: "Practical tools for teams who want better conversations, immediately.",
+    description: "Spark meaningful conversations that create clarity, trust, and action. A practical card deck to help teams reflect, realign, and move forward together.",
+    link: "mailto:info@ignite2transform.com?subject=Align%20&%20Thrive%20Cards%20Enquiry",
+    button: "Request for Align & Thrive Cards",
     y: 0,
     x: -40,
     delay: 0.4
@@ -39,7 +47,9 @@ const workData = [
   {
     icon: "ri:wechat-fill",
     title: "Feedback Yes!",
-    description: "A practical feedback practice tool for managers and teams.",
+    description: "Build confidence around feedback without fear or friction. A practical tool that helps managers and teams practice real conversations that improve performance.",
+    link: "https://feedbackyes.com/",
+    button: "Use FeedbackYes AI",
     y: 20,
     x: 0,
     delay: 0.6
@@ -47,7 +57,9 @@ const workData = [
   {
     icon: "ri:team-fill",
     title: "Team Building Sessions",
-    description: "Purposeful connection aligned to real work. No forced fun.",
+    description: "Connection with purpose. Alignment with impact. Not forced fun. Real conversations that strengthen collaboration and team culture. ",
+    link: "mailto:info@ignite2transform.com?subject=Team%20Building%20Request",
+    button: "Send a Team Building Request",
     y: 0,
     x: 40,
     delay: 0.6
@@ -73,12 +85,19 @@ export default function HowWeWork(){
                             initial={{ opacity: 0, y: item.y, x: item.x}}
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             transition={{ duration: 0.6, ease: "easeOut", delay: item.delay }}
-                            className="flex flex-col gap-4 bg-white p-6 rounded-2xl shadow-md group hover:scale-105 hover:bg-brand-green transition-all duration-300">
+                            viewport={{once: true}}
+                            className="flex flex-col gap-4 bg-white p-6 rounded-2xl shadow-md group sm:hover:scale-105 sm:hover:bg-brand-green transition-all duration-300">
                             <div className="flex gap-4 items-center">
                             <Icon icon={item.icon} className="text-[#044A2F] bg-[#D1E6D3] p-1 min-w-[32px] min-h-[32px] rounded-full overflow-hidden" />
-                            <h4 className="text-xl font-semibold mb-2 leading-tight group-hover:text-white transition-colors duration-300">{item.title} </h4>
+                            <h4 className="text-xl font-semibold mb-2 leading-tight sm:group-hover:text-white transition-colors duration-300">{item.title} </h4>
                             </div>
-                            <p className="text-sm opacity-80 group-hover:opacity-100 group-hover:text-white transition-colors duration-300">{item.description}</p>
+                            <p className="text-sm opacity-80 group-hover:opacity-100 sm:group-hover:text-white transition-colors duration-300">{item.description}</p>
+                            {item.link && 
+                              <a className="flex text-xs text-white gap-2 bg-brand-green px-5 py-2 rounded-md items-center text-center transition-colors duration-200 sm:group-hover:bg-[#D1E6D3] sm:group-hover:text-brand-green"
+                                href={item.link}>
+                                {item.button}                           
+                              </a>
+                            }
                         </motion.div>
                         ))}
                     </div>

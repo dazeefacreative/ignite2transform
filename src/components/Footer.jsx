@@ -52,15 +52,10 @@ export default function Footer(){
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 justify-between mx-auto px-4 max-w-7xl">
                 <div className="lg:col-span-2 flex flex-col gap-2 items-start">
                     <img src={logo} alt="Ignite to Transform Logo" className="w-48 h-auto" />
-                    <label className="font-semibold text-brand-green mt-4">Submit email for newsletter</label>
-                    <form className="relative" onSubmit={handleSubmit}>
-                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="border border-brand-green rounded-md p-2 w-full max-w-xs" />
-                        <button type="submit" className="absolute right-2 top-2 cursor-pointer">
-                            <Icon 
-                                icon="iconoir:arrow-up-right" 
-                                className="text-brand-green bg-brand-yellow p-1 rounded-xs size-6"/>
-                        </button>
-                    </form>
+                    <span className="font-semibold text-brand-green mt-4">Submit email for newsletter</span>
+                    <a href="https://dr-amarachis-newsletter.beehiiv.com/" className="flex text-sm text-white gap-2 bg-brand-green pl-5 p-2 rounded-md items-center transition-colors duration-200 hover:bg-brand-green-hover">
+                      Click to submit email <Icon icon="iconoir:arrow-up-right" className="text-brand-green bg-brand-yellow p-1 rounded-sm size-6" />
+                    </a>
                     {status && <span className="text-xs mt-2 text-brand-green">{status}</span>}
                 </div>
                 <div className="flex flex-col gap-2">

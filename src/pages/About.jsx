@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet";
 
+import drAmara from "../images/Dr Amara.jpeg"
+
 export default function About(){
 
     return(
@@ -9,7 +11,22 @@ export default function About(){
                 <meta name="description" content="Learn more about working with Ignite to Transform and how we can help you and your team thrive." />
             </Helmet>
             <section className="flex flex-col justify-center items-center md:gap-10 gap-6  mx-auto max-w-5xl p-12 md:rounded-xl">
-                <div className="flex flex-col items-start mb-4">
+                <div>
+                    <div className="float-left mr-6 mb-4 w-[300px] h-[full] sm:w-[400px] sm:h-[340px] rounded-lg overflow-hidden object-cover bg-brand-green/40 p-3">
+                        <img src={drAmara} className="w-full h-full object-cover rounded-lg" />
+                    </div>
+                    <h3 className="reveal-up sm:text-2xl text-lg mb-4 font-semibold text-brand-blue">
+                        Keynote Speaker on Leadership & Team Alignment
+                    </h3>
+                    <p className="reveal-up opacity-80 text-sm mb-4 sm:text-base">
+                        Dr. Amara Igboegwu-Okwum is a leadership and team alignment strategist who delivers compelling keynotes on communication, trust, feedback, and leading through change.                    
+                    </p>                    
+                    <p className="reveal-up opacity-80 text-sm mb-4 sm:text-base">
+                        With extensive experience supporting leaders across international NGOs and complex environments, she helps teams move from misalignment to clarity, confidence, and collective action.    
+                    </p>                    
+                    <p className="reveal-up opacity-80 text-sm mb-4 sm:text-base">
+                        Her talks blend powerful real-life stories with practical tools, leaving leaders grounded, energized, and equipped to lead with calm authority.                                    
+                    </p>                     
                     <h3 className="reveal-up sm:text-2xl text-lg mt-8 mb-4 font-semibold text-brand-blue">
                         Our mission
                     </h3>

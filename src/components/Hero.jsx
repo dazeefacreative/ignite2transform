@@ -26,7 +26,7 @@ export default function Hero(){
                     <p className="text-white text-2xl lg:text-3xl text-center sm:text-start ">We help leadership teams build shared understanding, trust, and clarity through intentional conversations, alignment tools, and facilitated spaces.</p>
                     <div className="flex flex-col sm:items-start items-center gap-2">
                         <a href="https://calendar.app.google/FAq3GDmqFkhffqxH7" className="flex text-black w-full max-w-[230px] h-[40px] justify-center gap-2 bg-white rounded-md items-center transition-colors duration-200 hover:bg-gray-300 active:bg-white">
-                            Book a Free Session <Icon icon="iconoir:arrow-up-right" className="text-brand-green bg-brand-yellow p-1 rounded-sm size-6" />
+                            Book A Free Call <Icon icon="iconoir:arrow-up-right" className="text-brand-green bg-brand-yellow p-1 rounded-sm size-6" />
                         </a>
                         <a href="/the_alignment" className="flex text-white w-full max-w-[230px] h-[40px] justify-center gap-2 border border-white rounded-md items-center transition-colors duration-200 hover:opacity-70">
                             Explore Align & Thrive 
